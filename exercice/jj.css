@@ -1,0 +1,25 @@
+.shooter-1 .target li.first li.third li.fourth
+.shooter-2 .target li.second li.third li.fourth li.fifth {
+  background-color: white;
+}
+.shooter-1 .target li.second li.fifth 
+.shooter-2 .target li.first {
+  background-color: red;
+}
+
+.shooter-1 .target li.first,
+.shooter-1 .target li.third,
+.shooter-1 .target li.fourth,
+.shooter-2 .target li.second,
+.shooter-2 .target li.third,
+.shooter-2 .target li.fourth,
+.shooter-2 .target li.fifth {
+background-color: white;
+}
+
+.shooter-1 .target li.second,
+.shooter-1 .target li.fifth,
+.shooter-2 .target li.first {
+background-color: red;
+}
+
