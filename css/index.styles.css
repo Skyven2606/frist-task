@@ -114,14 +114,14 @@ img {
 
 
 input {
-  width: 200px;
-  height: 35px;
+  width: 170px;
+  height: 33px;
   border: 1px solid #ccc;
   padding-top: 5px;
   padding-left: 8px;
   text-align: left;
   font-size: 11px;
-  margin-left: 52px;
+  margin-left: 73px;
 }
 
 input::-webkit-input-placeholder {
@@ -143,3 +143,99 @@ font-size: 11px;
   font-size: 13px;
   margin-left: 80px;
 }
+
+.input-group {
+  font-size: 11px;
+  text-align: start;
+  margin-left: 8px;
+}
+
+.radio__input {
+  width: 10px;
+  height: 12px;
+}
+
+i {
+  width: 10px;
+  height: 10px;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  border-color: #a0acb4;
+}
+
+.icon-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container-3 {
+display: block;
+position: relative;
+padding-left: 35px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 12px;
+user-select: none;
+margin-left: 50px;
+}
+
+.container-3 input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+color: #2A4A5C
+}
+
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 11px;
+width: 11px;
+background-color:#a0acb4;
+margin-left: 20px;
+border-color:#2a4a5c;
+}
+
+.container-3 input:checked ~ .checkmark {
+background-color: #2196F3;
+}
+
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+.login-btn {
+background-color: rgba(0, 106, 255, 0.852); 
+color: white; 
+padding: 12px 20px; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+font-size: 14px; 
+transition: background-color 0.3s ease; 
+margin-left: 72px;
+width: 200px;
