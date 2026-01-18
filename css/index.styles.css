@@ -48,24 +48,6 @@ img {
   margin-left: 80px;
 }
 
-.rectangle-2 {
-  width: 190px;
-  height: 30px;
-  background-color: #255a9b;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
-.rectangle-3 {
-  width: 190px;
-  height: 30px;
-  background-color: #0076b6;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-
 .container-2 {
   display: flex;
   align-items: flex-start;
@@ -75,26 +57,89 @@ img {
 
 .image1 {
   margin-top: 3px;
-  margin-left: 12px;
+  margin-left: 2px;
+  margin-right: 10px;
 }
 
 .image2 {
   margin-top: 3px;
-  margin-left: 13px;
+  margin-left: 2px;
+  margin-right: 10px;
 }
 
-.facebook-text {
-  font-size: 12px;
-  margin-left: 43px;
-  margin-top: 5px;
+.facebook {
+  background-color: #255a9b;
+  text-align: center;
   color: white;
+  font-size: 11px;
+  width: 190px;
+  height: 30px;
+  border: none;
+  align-items: center;
+  display: flex;
+  gap: 10px;
 }
 
-.custom-line {
-  border: none; /* Remove default border */
-  height: 4px; /* Thickness of the line */
-  background-color: #007bff; /* Line color */
-  width: 6; /* Line width */
-  margin: 40px auto; /* Center the line */
-  border-radius: 2px; /* Rounded edges */
+.linkedin {
+  background-color: #0076b6;
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  width: 190px;
+  height: 30px;
+  border: none;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.line-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #2a4a5c;
+  font-size: 10px;
+  margin-left: 192px;
+}
+
+.line-text::before,
+.line-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #a0acb4;
+  max-width: 80px;
+  margin: 0 8px;
+
+}
+
+
+input {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+  padding-left: 8px;
+  text-align: left;
+  font-size: 11px;
+  margin-left: 52px;
+}
+
+input::-webkit-input-placeholder {
+color: #a9b6c8;
+font-weight: bold;
+text-align: left;
+font-size: 11px;
+
+}
+
+.text2 {
+  color: #2a4a5c;
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.text3 {
+  color: #2a4a5c;
+  font-size: 13px;
+  margin-left: 80px;
 }
