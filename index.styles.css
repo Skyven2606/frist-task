@@ -1,6 +1,6 @@
 @font-face {
   font-family: "barlow";
-  src: url("fonts/Barlow-black.otf") format("truetype");
+  src: url("fonts/Barlow.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,10 +30,13 @@ img {
   margin-left: 320px;
 }
 
-.text {
+h2 {
   color: #2a4a5c;
   font-size: 25px;
   margin-left: 0px;
+  font-weight: 400;
+  padding-top: 50px;
+  margin-bottom: 0px;
 }
 
 .overlay {
@@ -43,9 +46,12 @@ img {
   width: 80px;
 }
 
-.second-text {
+h5 {
   color: #2a4a5c;
   font-size: 15px;
+  margin-left: 0px;
+  font-weight: 400;
+  margin-top: 11px;
   margin-left: 0px;
 }
 
@@ -53,7 +59,7 @@ img {
   display: flex;
   align-items: flex-start;
   gap: 50px;
-  margin-left: 0px;
+  margin-top: 40px;
 }
 
 .image1 {
@@ -98,9 +104,12 @@ img {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #2a4a5c;
-  font-size: 10px;
-  margin-left: 110px;
+  color: #000000;
+  font-size: 9px;
+  margin-left: 112px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .line-text::before,
@@ -112,73 +121,142 @@ img {
   margin: 0 8px;
 }
 
+.mailandphone {
+  display: flex;
+  gap: 60px;
+}
+
 .mail {
+  position: relative;
   width: 180px;
-  height: 33px;
-  border: 1px solid #ccc;
-  padding-top: 5px;
-  padding-left: 8px;
-  text-align: left;
-  font-size: 11px;
-  margin-left: 0px;
+}
+
+.mail input {
+  width: 170px;
+  padding: 18px 10px 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  outline: none;
   background-color: white;
 }
 
-.mail::-webkit-input-placeholder {
+.mail label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#a9b6c8;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.mail input:focus + label,
+.mail input:valid + label {
+  top: 6px;
+  font-size: 12px;
   color: #a9b6c8;
-  font-weight: bold;
-  text-align: left;
-  font-size: 11px;
 }
 
 .number {
+  position: relative;
   width: 180px;
-  height: 33px;
-  border: 1px solid #ccc;
-  padding-top: 5px;
-  padding-left: 8px;
-  text-align: left;
-  font-size: 11px;
-  margin-left: 0px;
-  background-color: white;
-  margin-left: 40px;
 }
 
-.number::-webkit-input-placeholder {
-  color: #a9b6c8;
-  font-weight: bold;
-  text-align: left;
-  font-size: 11px;
-}
-
-.text2 {
-  color: #2a4a5c;
-  font-size: 20px;
-  margin-left: 0px;
-}
-
-.text3 {
-  color: #2a4a5c;
+.number input {
+  width: 170px;
+  padding: 18px 10px 6px;
   font-size: 13px;
-  margin-left: 0px;
+  border: 1px solid #aaa;
+  outline: none;
+  background-color: white;
+}
+
+.number label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#a9b6c8;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.number input:focus + label,
+.number input:valid + label {
+  top: 6px;
+  font-size: 12px;
+  color: #a9b6c8;
+}
+
+.mail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #007bff;
+  opacity: 0;
+}
+
+.mail:focus-within::before {
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #007bff;
+  opacity: 0;
+}
+
+.number:focus-within::before {
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+h3 {
+  color: #2a4a5c;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+p {
+  color: #2a4a5c;
+  font-weight: 300;
+  margin-top: 10px;
+  font-size: 12px;
 }
 
 .input-group {
   font-size: 11px;
   text-align: start;
-  margin-left: px;
+  margin-top: 30px;
 }
 
 .radio__input {
   width: 10px;
   height: 12px;
-  margin-left: 20px;
 }
 
-i {
-  width: 10px;
-  height: 10px;
-  margin-left: ;
+i{
+  margin-right: 50px;
 }
 
 .icon-container {
@@ -188,20 +266,24 @@ i {
 
 .tooltip {
   position: absolute;
-  bottom: 120%;
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  color: black;
-  padding: 6px 10px;
+  transform: translate(-50%, 10px);
+  background-color: white;
+  color:#a9b6c8;
+  padding: 8px;
   border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
+  font-size: 11px;
+  white-space: normal;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s;
-  border-color: #a0acb4;
+  transition: opacity 0.2s ease;
+  width: 200px;
+  height: 39px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
+
 
 .icon-container:hover .tooltip {
   opacity: 1;
@@ -211,12 +293,10 @@ i {
 .container-3 {
   display: block;
   position: relative;
-  padding-left: px;
-  margin-bottom: px;
   cursor: pointer;
   font-size: 12px;
   user-select: none;
-  margin-left: 0px;
+  margin-top: 100px;
 }
 
 .checkmark,
@@ -231,6 +311,10 @@ input {
   background-color: #a0acb4;
   margin-left: 0px;
   border-color: #2a4a5c;
+}
+
+.terms {
+  color: #a9b6c8;
 }
 
 .container-3 input:checked ~ .checkmark {
@@ -252,8 +336,8 @@ input {
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
-  margin-left: px;
   width: 200px;
+  margin-top: 50px;
 }
 
 .link {
